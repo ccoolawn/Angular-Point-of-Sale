@@ -11,7 +11,7 @@
 				<tbody>
 					<tr ng-repeat="food in foods | filter: filter_name">
 						<td ng-bind="food.name"></td>
-						<td ng-bind="food.price"></td>
+						<td ng-bind="food.price | currency: 'USD $'"></td>
 						<td><button class="btn btn-danger btn-sm" ng-click="deleteFood(food._id)">Delete Menu Item</button></td>
 					</tr>
 				</tbody>

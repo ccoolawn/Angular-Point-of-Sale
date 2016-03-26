@@ -52,24 +52,36 @@ module.exports = function (app) {
 
 		});
 
-		// total food items
+		// total food order
 		app.post('api/total', function(req, res) {
 			Order.create({
 				name: req.body.text,
 				price: req.body.number,
-				quantity: req.body.int,
+				quantity: req.body.number,
 				done: false
 			}, function (err, food) {
 				if (err)
 					res.send(err);
 
 				// get and return all the foods after you create another
-				getTotal(res);
+				getFoods(res);
 			});
 		});
 
-		app.get('/api/total/:order_id', function(req, res) { 
-			Order.show(req, res) 
+		// get order by id
+		app.get('/api/total/:order_id', function(req, res) {
+			Order.show({
+				_id: req.params.order_id
+			}, function(err, order) {
+				var subtotal = 0
+				order.forEach(function(orderItem) {
+					subtotal += orderItem.price
+					console.log(orderItem);
+				})
+				subtotal = (subtotal *100)/100
+				totalPrice = (subtotal*1.075)/100
+				res.send({total:totalPrice, subtotal:subtotal})
+			})
 		});
 
 		// delete a food

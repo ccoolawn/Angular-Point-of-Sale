@@ -1,43 +1,28 @@
-<div class="row" ng-controller="ordersController">
-	<form class="form-group">
-		<input type="text" class="form-control input-lg text-center" placeholder="Customer Name" ng-model="formData.custname"><br>
+<div class="row">
+	<div class="row">
 		<table class="table table-striped table-bordered table-fixed">
 			<thead>
 				<th>Food Item</th>
 				<th>Price</th>
 				<th>Quantity</th>
-				<th></th>
+				<th>Subtotal</th>
 			</thead>
 			<tbody>
 				<tr ng-repeat="food in foods | filter: filter_name">
-					<td ng-bind="food.name" ng-model="formData.text"><input type="hidden" value="{{food.name}}"></td>
-					<td ng-bind="food.price | currency: 'USD$'" ng-model="formData.number"><input type="hidden" value="{{food.price}}"></td>
-					<td>
-						<select class="form-control" id="sel1" ng-model="formData.quantity">
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-						</select>
+					<td><input type="text" ng-model="food.name" class="input-small"></td>
+					<td><input type="number" ng-model="food.price" ng:required class="input-small"></td>
+					<td><input type="number" min="1" max="5" ng-model="food.quantity" ng:required class="input-mini">
 					</td>
-					<td ng-init="itemTotal = food.price * quantity; controller.Total = controller.Total + itemTotal">{{itemTotal}}</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>{{food.price * food.quantity | currency: 'USD $'}}</td>
 				</tr>
 			</tbody>
 		</table>
 		<!-- createFood() WILL CREATE NEW FOODS -->
 		<button type="submit" class="btn btn-primary btn-sm" ng-click="submitTotal()">Submit Total</button>
-	</form>
-	<section class="subtotal">
+	</div>
+	<section class="total">
 		<div>
-			<h4>Subtotal:</h4>
-			<p>{{subtotal}}</p>
+			<h4>Total: ${{total | currency: 'USD $'}}</h4>
 		</div>
 	</section>
 </div>

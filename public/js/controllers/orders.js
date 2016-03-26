@@ -9,9 +9,8 @@ angular.module('ordersController', [])
 
 	$scope.calculate = function() {
 		$scope.subtotal = ($scope.price * $scope.quantity).toFixed(2);
-	}
+	};
 
-$scope.calculate();
 	// CREATE TOTAL==================================================================
 	$scope.submitTotal = function() {
 

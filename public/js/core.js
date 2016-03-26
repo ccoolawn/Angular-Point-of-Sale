@@ -1,4 +1,4 @@
-var emerilsFood = angular.module('emerilsFood', ['ngRoute', 'foodController', 'foodService', 'orderService']);
+var emerilsFood = angular.module('emerilsFood', ['ngRoute', 'foodController', 'ordersController', 'foodService', 'orderService']);
 
 emerilsFood.config(function($routeProvider){
 	$routeProvider
