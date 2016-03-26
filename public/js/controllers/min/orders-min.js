@@ -1,0 +1,1 @@
+angular.module("ordersController",[]).controller("ordersController",["$scope","$http","Order",function(t,o,a){t.formData={},t.loading=!0,t.quantity=0,t.calculate=function(){t.subtotal=(t.price*t.quantity).toFixed(2)},t.calculate(),t.submitTotal=function(){void 0!=t.formData.text&&(t.loading=!0,a.create(t.formData).success(function(o){t.loading=!1,t.formData={},t.orders=o}))}}]);

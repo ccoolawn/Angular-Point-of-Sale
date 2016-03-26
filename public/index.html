@@ -1,0 +1,67 @@
+<!doctype html>
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="emerilsFood">
+<head>
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+	<title>Food Order App</title>
+
+	<!-- SCROLLS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<!-- SPELLS -->
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script><!-- load angular -->
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.js"></script>
+
+	<script src="js/controllers/main.js"></script> <!-- load up our controller -->
+	<script src="js/controllers/orders.js"></script> <!-- load up our orders controller -->
+	<script src="js/services/food.js"></script> <!-- load our food service -->
+	<script src="js/services/order.js"></script> <!-- load our order service -->
+	<script src="js/core.js"></script> <!-- load our main application -->
+
+</head>
+<body ng-controller="mainController">
+	<div class="container">
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#/">Big E's Sidewalk Cafe</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#/addnew">New Menu Items</a></li>
+						<!-- <li><a href="../navbar-static-top/">Static top</a></li>
+						<li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li> -->
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</nav>
+		<!-- PARTIAL VIEW -->
+		<div class="maincontainer">
+			<div class="innercover">
+				<div class="jumbotron">
+					<div ng-view></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="text-center text-muted">
+			<p>A demo by <a href="http://cornellcoulon.com">Cornell Coulon</a>.</p>
+			<p>Read the <a href="http://scotch.io/tutorials/javascript/creating-a-single-page-todo-app-with-node-and-angular">tutorial</a>.</p>
+		</div>
+
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+angular.module("orderService",[]).factory("Order",["$http",function(t){return{get:function(){return t.get("/api/total")},create:function(e){return t.post("/api/total",e)},show:function(e){return t.show("/api/total/"+e)},"delete":function(e){return t["delete"]("/api/total/"+e)}}}]);

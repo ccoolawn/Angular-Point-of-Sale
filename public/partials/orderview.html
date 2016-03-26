@@ -1,0 +1,16 @@
+<div class="row">
+	<table class="table table-striped table-bordered table-fixed">
+		<thead>
+			<th>Food Item</th>
+			<th>Quantity</th>
+			<th>Price</th>
+		</thead>
+		<tbody>
+			<tr ng-repeat="food in foods | filter: filter_name">
+				<td ng-bind="food.name"></td>
+				<td ng-bind="food.quantity"></td>
+				<td ng-bind="food.price | currency: 'USD$'"></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
