@@ -3,10 +3,19 @@ html {
 
 body {
   padding-top: 50px;
-  background-color: #333; }
+  background-image: url(/img/bbqshrimp.jpg); }
+
+nav {
+  background-color: rgba(238, 238, 238, 0.6); }
+
+#navbar {
+  margin-top: 15px; }
 
 .maincontainer {
-  margin-top: 3rem; }
+  margin-top: 8rem; }
+
+.jumbotron {
+  background-color: rgba(238, 238, 238, 0.7); }
 
 #food-list {
   margin-bottom: 30px; }
@@ -17,3 +26,6 @@ body {
 .total {
   float: right;
   margin-right: 5em; }
+
+.tprice {
+  color: green; }

@@ -1,0 +1,1 @@
+angular.module("foodService",[]).factory("Food",["$http",function(o){return{get:function(){return o.get("/api/foods")},create:function(t){return o.post("/api/foods",t)},"delete":function(t){return o["delete"]("/api/foods/"+t)},getsTotal:function(t){return console.log(t,"I'm here!!!"),o.post("/api/total",t)}}}]);

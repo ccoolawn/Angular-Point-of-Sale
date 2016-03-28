@@ -1,4 +1,4 @@
-var emerilsFood = angular.module('emerilsFood', ['ngRoute', 'foodController', 'ordersController', 'foodService', 'orderService']);
+var emerilsFood = angular.module('emerilsFood', ['ngRoute', 'foodController', 'foodService']);
 
 emerilsFood.config(function($routeProvider){
 	$routeProvider
@@ -8,10 +8,6 @@ emerilsFood.config(function($routeProvider){
 	.when('/addnew', {
 		controller: 'mainController',
 		templateUrl: '/partials/createfood.html'
-	})
-	.when('/complete', {
-		controller: 'ordersController',
-		templateUrl: '/partials/orderview.html'
 	})
 
 	.otherwise('/');

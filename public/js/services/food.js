@@ -12,6 +12,10 @@ angular.module('foodService', [])
 			},
 			delete : function(id) {
 				return $http.delete('/api/foods/' + id);
+			},
+			getsTotal : function(tabData) {
+				console.log(tabData,"I'm here!!!");
+				return $http.post('/api/total', tabData);
 			}
-		}
+		};
 	}]);

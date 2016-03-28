@@ -27,6 +27,28 @@
 		"shouldRunBless": 0,
 		"useLibsass": false
 		},
+	"\/img\/bbqshrimp.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2.31328e+06,
+		"inputAbbreviatedPath": "\/img\/bbqshrimp.jpg",
+		"outputAbbreviatedPath": "\/img\/bbqshrimp.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/Emerils_New_Orleans.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8583,
+		"inputAbbreviatedPath": "\/img\/Emerils_New_Orleans.png",
+		"outputAbbreviatedPath": "\/img\/Emerils_New_Orleans.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -53,28 +75,6 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/controllers\/min\/main-min.js",
 		"outputAbbreviatedPath": "\/js\/controllers\/min\/min\/main-min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/js\/controllers\/min\/orders-min.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/controllers\/min\/orders-min.js",
-		"outputAbbreviatedPath": "\/js\/controllers\/min\/min\/orders-min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/js\/controllers\/orders.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/controllers\/orders.js",
-		"outputAbbreviatedPath": "\/js\/controllers\/min\/orders-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -113,23 +113,12 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/js\/services\/min\/order-min.js": {
+	"\/js\/services\/min\/food-min.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/services\/min\/order-min.js",
-		"outputAbbreviatedPath": "\/js\/services\/min\/min\/order-min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/js\/services\/order.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/services\/order.js",
-		"outputAbbreviatedPath": "\/js\/services\/min\/order-min.js",
+		"inputAbbreviatedPath": "\/js\/services\/min\/food-min.js",
+		"outputAbbreviatedPath": "\/js\/services\/min\/min\/food-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,

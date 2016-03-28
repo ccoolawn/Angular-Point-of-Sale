@@ -1,5 +1,8 @@
 var Food = require('./models/food');
-var Order= require('./models/order');
+var Total = {};
+var express = require('express');
+var bodyParser = require('body-parser');
+var app = express();
 
 function getFoods(res) {
 	Food.find(function (err, foods) {
@@ -14,18 +17,9 @@ function getFoods(res) {
 	});
 };
 
-function getTotal(res) {
-	Order.find(function(err, orders) {
-		if (err) {
-			res.send(err);
-		}
-
-	res.json(orders);
-	console.log(orders);
-	});
-
-};
 module.exports = function (app) {
+
+		app.use(bodyParser.urlencoded({ extended: true }));
 
 		// api ---------------------------------------------------------------------
 		// get all foods
@@ -49,39 +43,22 @@ module.exports = function (app) {
 				// get and return all the foods after you create another
 				getFoods(res);
 			});
-
 		});
 
-		// total food order
-		app.post('api/total', function(req, res) {
-			Order.create({
-				name: req.body.text,
-				price: req.body.number,
-				quantity: req.body.number,
-				done: false
-			}, function (err, food) {
-				if (err)
-					res.send(err);
+		// create order
+		app.post('/api/total', function(req, res) {
+			var order = req.body;
+			// console.log(order);
+			var subtotal = 0;
 
-				// get and return all the foods after you create another
-				getFoods(res);
-			});
-		});
-
-		// get order by id
-		app.get('/api/total/:order_id', function(req, res) {
-			Order.show({
-				_id: req.params.order_id
-			}, function(err, order) {
-				var subtotal = 0
-				order.forEach(function(orderItem) {
-					subtotal += orderItem.price
-					console.log(orderItem);
+			order.forEach(function(menuItem) {
+				subtotal += (menuItem.price * menuItem.qty);
+			console.log(subtotal);
 				})
-				subtotal = (subtotal *100)/100
-				totalPrice = (subtotal*1.075)/100
+				subtotal = Math.ceil(subtotal*100)/100;
+				totalPrice = Math.ceil(subtotal*1.075);
 				res.send({total:totalPrice, subtotal:subtotal})
-			})
+
 		});
 
 		// delete a food
