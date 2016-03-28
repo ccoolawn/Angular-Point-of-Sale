@@ -1,8 +1,9 @@
 angular.module('foodController', [])
 
 	// inject the Food service factory into our controller
-	.controller('mainController', ['$scope','$http','Food', function($scope, $http, Food) {
+	.controller('mainController', ['$scope','$http','$window', 'Food', function($scope, $http, $window, Food) {
 		$scope.formData = {};
+		$scope.master = {};
 		$scope.loading = true;
 
 		// GET =====================================================================
@@ -40,10 +41,15 @@ angular.module('foodController', [])
 
 			Food.getsTotal($scope.foods)
 				.success(function(foodTotal) {
-					console.log(foodTotal.total,"Who am I?");
+					// console.log(foodTotal.total,"Who am I?");
 					$scope.subtotal = foodTotal.subtotal;
 					$scope.total = foodTotal.total;
 				});
+		};
+
+		// RESET APP==================================================================
+		$scope.reloadRoute = function() {
+			$window.location.reload();
 		};
 
 		// DELETE ==================================================================

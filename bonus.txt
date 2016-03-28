@@ -1,0 +1,7 @@
+As I was thinking through the project, I wanted the ability to add menu items separately so that the menu items would already populate the order form. This would eliminate the need to re-type the menu items each time. I chose to add the ability to calculate quantity as well.
+
+My thoughts were that Chef Emeril would not be taking the orders himself, he would likely hire someone else to do it. By simplifying the order process, it helps to eliminate the possibility of error.
+
+I wanted to personalize the app by adding the Emeril's logo and an image of New Orleans BBQ shrimp.
+
+Thank you for the opportunity to apply to Gesto Technologies, & I lok forward to the next step in the process.
