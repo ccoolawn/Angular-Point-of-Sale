@@ -38,9 +38,12 @@ angular.module('foodController', [])
 		// CREATE TOTAL==================================================================
 	$scope.submitTotal = function() {
 		var total = 0;
+		var subtotal = 0;
 		angular.forEach($scope.food, function(food) {
-			total += (food.price * food.quantity) * 1.075;
-		})
+			console.log(food, "hello");
+			subtotal += food.price * food.quantity;
+			total += subtotal * 1.075;
+		});
 		return total;
 	};
 
