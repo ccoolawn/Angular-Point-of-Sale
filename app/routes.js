@@ -56,7 +56,7 @@ module.exports = function (app) {
 			console.log(subtotal);
 				})
 				subtotal = Math.ceil(subtotal*100)/100;
-				totalPrice = Math.ceil(subtotal*1.075);
+				totalPrice = (subtotal*1.075);
 				res.send({total:totalPrice, subtotal:subtotal})
 
 		});
