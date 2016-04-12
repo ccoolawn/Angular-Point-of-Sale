@@ -1,4 +1,4 @@
-# Node Todo App
+# Node Point of Sale App
 
 A Node app built with MongoDB and Angular.
 
