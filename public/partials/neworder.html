@@ -12,7 +12,7 @@
 					<tr ng-repeat="food in foods">
 						<td><input type="text" name="name" ng-model="food.name" class="input-small form-control"></td>
 						<td><input type="number" name ="price" ng-model="food.price" ng:required step="0.01" class="input-small form-control"></td>
-						<td><input type="number" min="1" max="5" name="qty" ng-model="food.qty" ng:required class="input-mini form-control"></td>
+						<td><input type="number" value="0" min="0" max="5" name="qty" ng-model="food.qty" ng:required class="input-mini form-control"></td>
 						<td>{{food.price * food.qty | currency}}</td>
 					</tr>
 				</tbody>

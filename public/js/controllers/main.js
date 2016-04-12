@@ -5,6 +5,7 @@ angular.module('foodController', [])
 		$scope.formData = {};
 		$scope.master = {};
 		$scope.loading = true;
+		$scope.food = { qty: 0 };
 
 		// GET =====================================================================
 		// when landing on the page, get all foods and show them
